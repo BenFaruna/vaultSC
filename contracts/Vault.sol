@@ -91,4 +91,8 @@ contract Vault {
             revert FUND_CLAIM_TIME_NOT_REACHED();
         }
     }
+
+    receive() external payable {
+        revert("This contract does not accept direct payments");
+    }
 }
